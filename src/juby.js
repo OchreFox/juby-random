@@ -13,7 +13,7 @@ const getChampions = async () => {
     .map((champion) => champion.name);
 };
 
-async function main() {
+async function juby() {
   const champions = await getChampions();
   const juby = `Hey Mcbaze, if I'm playing ${
     champions[Math.floor(Math.random() * champions.length)]
@@ -26,7 +26,7 @@ async function main() {
   }, should I be looking to ${
     options[Math.floor(Math.random() * options.length)]
   }?`;
-  console.log(juby);
+  return juby;
 }
 
-main();
+module.exports = juby;
